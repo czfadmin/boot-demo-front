@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+	selector: 'app-root',
+	template: `
+		<router-outlet ></router-outlet >
+	`,
+	styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'boot-demo-font';
+	title = 'boot-demo-font';
 }
