@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
-import {Contacts, RecentUsers, UserData} from "../data/user";
 import {Observable, of as observableOf} from "rxjs";
+import {Contacts, RecentUsers, UserData} from "../data/user";
 
 
 @Injectable({
 	providedIn: 'root'
 })
-export class UserService extends UserData{
+export class UserService extends UserData {
 	private time: Date = new Date;
 	private users = {
 		nick: {name: 'Nick Jones', picture: 'assets/images/nick.png'},
@@ -72,17 +72,22 @@ export class UserService extends UserData{
 			time: this.time.setHours(8, 0)
 		},
 	];
-	
-	
+
+
 	getUsers(): Observable<any> {
 		return observableOf(this.users);
 	}
-	
+
 	getContacts(): Observable<Contacts[]> {
 		return observableOf(this.contacts);
 	}
-	
+
 	getRecentUsers(): Observable<RecentUsers[]> {
 		return observableOf(this.recentUsers);
+	}
+
+	logout(): Observable<any> {
+		//TODO:修改用户退出功能
+		return observableOf("You have been  logged out!")
 	}
 }

@@ -15,6 +15,7 @@ import {
 	NbThemeModule,
 	NbUserModule
 } from '@nebular/theme';
+import {NotFoundComponent} from "../pages/not-found/not-found.component";
 import {HeaderComponent} from './components';
 import {OneColumnLayoutComponent} from './layouts/one-column/one-column-layout.component';
 
@@ -35,11 +36,13 @@ const COMPONENT = [];
 	],
 	exports: [
 		CommonModule,
-		OneColumnLayoutComponent
+		OneColumnLayoutComponent,
+		HeaderComponent
 	],
 	declarations: [
 		OneColumnLayoutComponent,
-		HeaderComponent
+		HeaderComponent,
+		NotFoundComponent,
 	],
 })
 export class ThemeModule {

@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {PagesComponent} from './pages.component';
+import {ProfileComponent} from "./profile/profile.component";
 
 const routes: Routes = [
 	{
@@ -12,6 +13,10 @@ const routes: Routes = [
 			{
 				path: 'dashboard',
 				component: DashboardComponent
+			},
+			{
+				path: 'profile',
+				component: ProfileComponent
 			},
 			{
 				path: '**',
@@ -24,12 +29,17 @@ const routes: Routes = [
 		redirectTo: 'dashboard',
 		pathMatch: 'full',
 	},
+	{
+		path: '**',
+		component: NotFoundComponent,
+	},
 
 ];
 
 
 @NgModule({
-	declarations: [],
+	declarations: [
+	],
 	imports: [
 		RouterModule.forChild(routes)
 	],
