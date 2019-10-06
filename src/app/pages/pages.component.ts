@@ -9,12 +9,12 @@ import {MENU_ITEMS} from "./pages-menu";
 			<router-outlet ></router-outlet >
 		</app-one-column >
 	`,
-	styleUrls: ['./pages.component.scss']
+	styleUrls: ['./pages.component.less']
 })
 export class PagesComponent {
 	menu = MENU_ITEMS;
-
+	
 	constructor() {
 	}
-
+	
 }

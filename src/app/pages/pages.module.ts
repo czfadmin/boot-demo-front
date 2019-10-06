@@ -5,14 +5,13 @@ import {PagesRoutingModule} from './pages-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {PagesComponent} from './pages.component';
 import {NotFoundComponent} from './not-found/not-found.component';
-import {ProfileComponent} from "./profile/profile.component";
-import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
 	imports: [
 		PagesRoutingModule,
 		ThemeModule,
+		NbMenuModule,
 		NbMenuModule.forRoot(),
 		NbSidebarModule.forRoot()
 	],
@@ -21,8 +20,6 @@ import { RegisterComponent } from './register/register.component';
 		DashboardComponent,
 		PagesComponent,
 		NotFoundComponent,
-		ProfileComponent,
-		RegisterComponent
 	]
 })
 export class PagesModule {

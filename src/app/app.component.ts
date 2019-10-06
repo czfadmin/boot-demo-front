@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
 	template: `
 		<router-outlet ></router-outlet >
 	`,
-	styleUrls: ['./app.component.scss']
+	styleUrls: ['./app.component.less']
 })
 export class AppComponent {
 	title = 'boot-demo-font';
