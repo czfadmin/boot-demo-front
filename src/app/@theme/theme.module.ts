@@ -17,6 +17,7 @@ import {
 } from '@nebular/theme';
 import {HeaderComponent} from './components';
 import {OneColumnLayoutComponent} from './layouts/one-column/one-column-layout.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const COMPONENT = [];
 
@@ -39,7 +40,8 @@ const COMPONENT = [];
 	],
 	declarations: [
 		OneColumnLayoutComponent,
-		HeaderComponent
+		HeaderComponent,
+		FooterComponent
 	],
 })
 export class ThemeModule {
