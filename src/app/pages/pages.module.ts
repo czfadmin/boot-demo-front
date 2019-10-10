@@ -1,8 +1,9 @@
+import {ReactiveFormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 import {NgModule} from '@angular/core';
-import {NbMenuModule, NbSidebarModule} from "@nebular/theme";
+import {NbButtonModule, NbCardModule, NbMenuModule, NbSidebarModule} from '@nebular/theme';
 import {ThemeModule} from "../@theme/theme.module";
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {NotFoundComponent} from "./not-found/not-found.component";
 import {PagesRoutingModule} from './pages-routing.module';
 import {PagesComponent} from './pages.component';
 import {ProfileComponent} from "./profile/profile.component";
@@ -14,13 +15,17 @@ import {ProfileComponent} from "./profile/profile.component";
 		ThemeModule,
 		NbMenuModule,
 		NbMenuModule.forRoot(),
-		NbSidebarModule.forRoot()
+		NbSidebarModule.forRoot(),
+		NbCardModule,
+		ReactiveFormsModule,
+		NbButtonModule
 	],
 
 	declarations: [
 		DashboardComponent,
 		PagesComponent,
 		ProfileComponent,
+		LoginComponent,
 	],
 })
 export class PagesModule {

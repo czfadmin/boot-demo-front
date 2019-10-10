@@ -1,0 +1,25 @@
+<!-- <<nb-card>
+	<nb-card-body>
+		<form action="api/account/login" method="POST">
+			<label for="username">Username</label>
+			<input id="username" name="username" />
+			<lable for="password">Password</lable>
+			<input id="password" name="password" />
+			<button nbButton>Login</button>
+		</form>
+	</nb-card-body>
+</nb-card> -->
+
+<nb-card>
+	<nb-card-body>
+		<label> Username:<input type="text" [formControl]="username" /> </label>
+		<label>
+			Password: <input type="password" [formControl]="password" />
+		</label>
+		<label > Remember Me:
+			<input type="radio" [formControl]="rememberMe"/>
+		</label >
+		
+	</nb-card-body>
+	<nb-card-footer><button nbButton (click)="login()">Login</button></nb-card-footer>
+</nb-card>
